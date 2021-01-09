@@ -24,6 +24,7 @@ algorithms=(
 	"sm3"
 )
 
+#match input algorithm to those listed from OpenSSL help
 matchAglorithm() {
 	local e match="$1"
 	shift
@@ -31,20 +32,22 @@ matchAglorithm() {
 	return 1
 }
 
+#print list of supported algorithms
 printAlgorithms() {
 	echo "";
-	echo "The following algorithms are supported by OpenSSL";
+	echo "The following algorithms are supported by OpenSSL:";
 	for algo in "${algorithms[@]}"
 	do
 		echo "$algo";
 	done
+	echo "";
 }
 
 #print usage help and exit
 usage() { echo "Usage: $0 [-f file_path] [-a algorithm] [-d digest to compare]" 1>&2;
 	  echo "Preferred algorithms are MD5, SHA3-256, and SHA3-512" 1>&2;
 	  echo "";
-	  #printAlgorithms;
+	  printAlgorithms;
  	exit 1;
 }
 
