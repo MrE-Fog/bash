@@ -3,16 +3,17 @@
 This listing contains multiple bash scripts.
 Some are for testing purposes, others are for convenience.
 
-#error_report.sh 
+* [error_report.sh](https://github.com/nadir-it/bash/blob/master/error_report.sh)
 
 This script does nothing but collect error messages from syslog and syslog.1 into a single file.
 
-#ping_sweep.sh
+
+* [ping_sweep.sh](https://github.com/nadir-it/bash/blob/master/ping_sweep.sh)
 
 Ping sweep looks for active nodes on a subnet.
 It is currently configured to 192.168.1.x but could easily be modified to use any other.
 
-#checksum.sh
+* [checksum.sh](https://github.com/nadir-it/bash/blob/master/checksum.sh)
 
 checksum.sh is a wrapper around the OpenSSL utility.
 If given a file and an algorithm it will return the hash of the file.
